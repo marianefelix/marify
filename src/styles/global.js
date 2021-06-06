@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
-
   * {
     margin: 0;
     padding: 0;
@@ -12,6 +10,7 @@ export default createGlobalStyle`
   :root {
     --white: #fff;
     --background-header: #7159c1;
+    --background-add-button: #3b5bfd;
   }
 
   html, body, #root {
