@@ -3,7 +3,7 @@ import Card from '../Card';
 
 import { Container, Header, Title, Button, CardsList } from './styles';
 
-const List = ({ data }) => {
+const List = ({ data, index: listIndex }) => {
   return (
     <Container>
       <Header>
@@ -15,8 +15,13 @@ const List = ({ data }) => {
         )}
       </Header>
       <CardsList done={data.done}>
-        {data.cards.map((card) => (
-          <Card key={card.id} data={card} />
+        {data.cards.map((card, index) => (
+          <Card 
+            key={card.id}
+            listIndex={listIndex}
+            index={index}
+            data={card} 
+          />
         ))}
       </CardsList>
     </Container>
