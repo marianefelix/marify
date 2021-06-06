@@ -1,16 +1,18 @@
 import { Avatar, Container, Description, Header, Label } from './styles';
 
-const Card = () => {
+const Card = ({ data }) => {
   return (
     <Container>
       <Header>
-        <Label color={`var(--background-header)`} />
+        <Label color={data.labels[0]} />
       </Header>
-      <Description>Exemplo de descrição de tarefa</Description>
-      <Avatar
-        src="https://github.com/marianefelix.png"
-        alt="Avatar do usuário"
-      />
+      <Description>{data.content}</Description>
+      {data.user && (
+        <Avatar
+          src={data.user}
+          alt="Avatar do usuário"
+        />
+      )}
     </Container>
   );
 }

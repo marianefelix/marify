@@ -39,4 +39,5 @@ export const Button = styled.button`
 
 export const CardsList = styled.ul`
   margin-top: 30px;
+  opacity: ${(props) => props.done ? 0.6 : 1};
 `;

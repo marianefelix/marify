@@ -3,20 +3,21 @@ import Card from '../Card';
 
 import { Container, Header, Title, Button, CardsList } from './styles';
 
-const List = () => {
+const List = ({ data }) => {
   return (
     <Container>
       <Header>
-        <Title>Tarefas</Title>
-        <Button type='button'>
-          <MdAdd size={24} color={'#FFF'} />
-        </Button>
+        <Title>{data.title}</Title>
+        {data.creatable && (
+          <Button type='button'>
+            <MdAdd size={24} color={'#FFF'} />
+          </Button>
+        )}
       </Header>
-      <CardsList>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      <CardsList done={data.done}>
+        {data.cards.map((card) => (
+          <Card key={card.id} data={card} />
+        ))}
       </CardsList>
     </Container>
   );
