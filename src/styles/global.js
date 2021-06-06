@@ -9,8 +9,8 @@ export default createGlobalStyle`
 
   :root {
     --white: #fff;
-    --background-header: #7159c1;
-    --background-add-button: #3b5bfd;
+    --purple: #7159c1;
+    --blue: #3b5bfd;
   }
 
   html, body, #root {

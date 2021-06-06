@@ -10,7 +10,7 @@ const List = ({ data }) => {
         <Title>{data.title}</Title>
         {data.creatable && (
           <Button type='button'>
-            <MdAdd size={24} color={'#FFF'} />
+            <MdAdd size={24} color={`var(--white)`} />
           </Button>
         )}
       </Header>

@@ -33,7 +33,7 @@ export const Button = styled.button`
 
   border-radius: 10px;
   border: 0;
-  background: var(--background-add-button);
+  background: var(--blue);
   cursor: pointer;
 `;
 

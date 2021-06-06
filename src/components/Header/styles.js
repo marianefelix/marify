@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
 
   padding: 0 1.8rem;
-  background: var(--background-header);
+  background: var(--purple);
   color: var(--white);
 `;
 
